@@ -20,6 +20,7 @@ const Year = styled.div`
 
 const ListItemComponent = ({ data }) => {
   const { Title: title, Year: year } = data;
+  console.log({data})
   return (
     <ListItem>
       <Title>{title}</Title>

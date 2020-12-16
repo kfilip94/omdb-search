@@ -3,7 +3,7 @@ import ListItem from '../ListItem/ListItem';
 
 const ListComponent = ({ data }) => {
   return <li>
-    {data && data.map(rowData => <ListItem data={rowData}/>)}
+    {data && data.map((rowData, i) => <ListItem key={rowData.imdbID} data={rowData}/>)}
   </li>
 }
 
