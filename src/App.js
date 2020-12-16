@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import MoviesPage from './pages/MoviesPage';
+import styled, { createGlobalStyle } from "styled-components";
 
-function App() {
+const AppStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  text-align: center;
+  margin: auto;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: auto;
+  max-width: 600px;
+`;
+
+const GlobalStyle = createGlobalStyle`
+  button, input {
+    border: none;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  * {
+    font-family: sans-serif;
+  }
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppStyled>
+      <GlobalStyle />
+      <MoviesPage />
+    </AppStyled>
   );
 }
 
