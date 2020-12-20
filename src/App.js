@@ -1,4 +1,5 @@
-import MoviesPage from './pages/MoviesPage';
+import React from "react";
+import MoviesPage from "./pages/MoviesPage";
 import styled, { createGlobalStyle } from "styled-components";
 
 const AppStyled = styled.div`
@@ -38,6 +39,6 @@ const App = () => {
       <MoviesPage />
     </AppStyled>
   );
-}
+};
 
 export default App;

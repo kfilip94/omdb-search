@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 
 const ListItem = styled.li`
@@ -9,24 +9,23 @@ const ListItem = styled.li`
   padding: 16px;
   margin: 4px 0;
   width: 100%;
-`
+`;
 const Title = styled.div`
   margin-right: 16px;
-`
+`;
 
 const Year = styled.div`
   color: gray;
-`
+`;
 
 const ListItemComponent = ({ data }) => {
   const { Title: title, Year: year } = data;
-  console.log({data})
   return (
     <ListItem>
       <Title>{title}</Title>
       <Year>{year}</Year>
     </ListItem>
   );
-}
+};
 
 export default ListItemComponent;

@@ -1,10 +1,15 @@
-import React from 'react';
-import ListItem from '../ListItem/ListItem';
+import React from "react";
+import ListItem from "../ListItem/ListItem";
 
 const ListComponent = ({ data }) => {
-  return <li>
-    {data && data.map((rowData, i) => <ListItem key={rowData.imdbID} data={rowData}/>)}
-  </li>
-}
+  return (
+    <ul>
+      {data &&
+        data.map((rowData, i) => (
+          <ListItem key={rowData.imdbID} data={rowData} />
+        ))}
+    </ul>
+  );
+};
 
 export default ListComponent;
